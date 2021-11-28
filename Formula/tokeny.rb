@@ -5,20 +5,20 @@
 class Tokeny < Formula
   desc "Minimal TOTP generator from your Shell"
   homepage "https://github.com/zalopay-oss/tokeny"
-  version "1.0.2-rc.1"
+  version "1.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/zalopay-oss/tokeny/releases/download/v1.0.2-rc.1/tokeny_1.0.2-rc.1_macOS_x86_64.tar.gz"
-      sha256 "c47af234580632d419f56d196f0fdb2c947ba28d17ed925c52759e9ba3da71a0"
+    if Hardware::CPU.arm?
+      url "https://github.com/zalopay-oss/tokeny/releases/download/v1.0.2/tokeny_1.0.2_macOS_arm64.tar.gz"
+      sha256 "df075aafc1d34729939dab862751023cf3ee021c44e74be144cece3e5ae0f2ad"
 
       def install
         bin.install "tokeny"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/zalopay-oss/tokeny/releases/download/v1.0.2-rc.1/tokeny_1.0.2-rc.1_macOS_arm64.tar.gz"
-      sha256 "3cf0ec0339839966c97ba7f7706692b8b59c87e961e3ebc8962e84eeaa5d69fa"
+    if Hardware::CPU.intel?
+      url "https://github.com/zalopay-oss/tokeny/releases/download/v1.0.2/tokeny_1.0.2_macOS_x86_64.tar.gz"
+      sha256 "2a484594efcc35b8310d7e7107f8786b24943640449be240d974a839dac9e3a8"
 
       def install
         bin.install "tokeny"
@@ -28,8 +28,8 @@ class Tokeny < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/zalopay-oss/tokeny/releases/download/v1.0.2-rc.1/tokeny_1.0.2-rc.1_Linux_x86_64.tar.gz"
-      sha256 "c70503a3f5a9525236407923406f69c3f9d63082db7b7dad6f1d506edbfde581"
+      url "https://github.com/zalopay-oss/tokeny/releases/download/v1.0.2/tokeny_1.0.2_Linux_x86_64.tar.gz"
+      sha256 "1291c76d591c610502dc82d9bead3cbb8c6f759d0f13e826f53e501d0053fc64"
 
       def install
         bin.install "tokeny"
